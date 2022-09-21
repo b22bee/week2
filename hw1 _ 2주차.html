@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		#cV{font-size: 48px; color: white}
+	</style>
+</head>
+<body>
+	<div id="cV"></div>
+	<input type = "color" id= "cPic"> 
+	<script type = "text/javascript">
+
+		cPic.oninput = function(){
+			document.body.style.background = cPic.value; 
+			cV.innerHTML = cPic.value;
+		}
+
+	</script>
+</body>
+</html>

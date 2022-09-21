@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+	body{margin: 0;}
+		.box{width: 30px; height: 30px; border-radius: 50%; position: absolute; left: 100px; top: 100px; background: red;}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+
+	makeBox();
+	function makeBox(){
+		var a = document.createElement("div");
+		a.id = "square";
+		a.className = "box";
+		var b = Math.random()*window.innerWidth;
+		var c = Math.randon()*window.innerHeight;
+		a.style.left = b + "px";
+		a.style.top = c + "px";
+		a.onclick = function(){
+			a.parentNode.removeChild(a);
+			makeBox();
+		}
+		document.body.appendChild(a);
+
+	}
+	</script>
+</body>
+</html>
